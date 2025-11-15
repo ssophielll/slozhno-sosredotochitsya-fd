@@ -1,7 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: url(images/cover-image-dark.png);
+  font-family: var(--font-fam);
+  background-image: var(--bg-image);
   background-color: var(--bg-color);
   background-position: center;
   background-size: cover;
@@ -10,6 +11,54 @@
 }
 
 .header {
-  height: 100vh;
-  min-height: 668px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: 0;
+  align-items: center;
+  position: relative;
+}
+
+.rec {
+  position: absolute;
+  color: var(--accent-color);
+  font-size: var(--main-text-size);
+  top: 0;
+  right: 28px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__main-title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  justify-self: start;
+  line-height: 83%;
+  margin: 0;
+}
+
+.header__title-card {
+  justify-self: end;
+  display: block;
+  max-inline-size: 355px;
+}
+
+.header__title-card-span {
+  margin: 0;
+}
+
+.title-decor {
+  color: var(--title-color);
+  background-color: var(--accent-color);
+  font-size: var(--main-text-size);
+  text-align: start;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  margin: 0;
 }
