@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" href="./images/mobile-icon.png"> 
     <script src="./scripts/script.js"></script>
     <link rel="stylesheet" href="./fonts/fonts.css"/>
+    <link rel="stylesheet" href="./styles/globals.css"/>
     <link rel="stylesheet" href="./styles/variables.css"/>
     <link rel="stylesheet" href="./styles/style.css"/>
     <link rel="stylesheet" href="./styles/dark.css"/>
@@ -18,9 +19,9 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <span class="rec" aria-hidden="true">
+      <div class="rec" aria-hidden="true">
         REC
-      </span>
+      </div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -59,8 +60,8 @@
         </p>
       </h2>
     </header>
-    <main>
-      <section class="why">
+    <main class="main">
+      <section class="content-section section__why">
         <h2 class="section__question">
           Почему сосредоточиться так сложно
         </h2>
@@ -70,7 +71,7 @@
               Многозадачность
             </h3>
             <p class="section__answer-description">
-              Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи выяснили, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.
+              Особенно сложно сосредоточиться, когда задач много и все они — важные. Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? А дело в том, что её просто не существует. Исследователи <a class="link" href="https://dana.org/news-and-insights/">выяснили</a>, что мозгу тяжело концентрироваться даже на двух делах одновременно. А когда в поле внимания попадает несколько важных задач, организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро устаём.
             </p>
           </article>
           <article class="article-list-item">
@@ -83,7 +84,7 @@
           </article>
         </div>
       </section>
-      <section class="what">
+      <section class="content-section section__what">
         <h2 class="section__question">
           Что снижает концентрацию внимания?
         </h2>
@@ -114,7 +115,7 @@
           </article>
         </div>
       </section>
-      <section class="how">
+      <section class="content-section section__how">
         <h2 class="section__question">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
         </h2>
@@ -143,7 +144,7 @@
               Прогуляйтесь
             </h4>
             <p class="section__answer-description">
-              Или даже пробегитесь. Лучше найти парк или лес: один эксперимент показал, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.
+              Или даже пробегитесь. Лучше найти парк или лес: один эксперимент <a class="link" href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328">показал</a>, что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка — тоже отличный вариант.
             </p>
           </article>
           <article class="article-list-item">
@@ -164,39 +165,42 @@
           </article>
         </div>
       </section>
-      <section class="gallery">
-        <h3 class="section__open-question title-decor"></h3>
-        <div class="pictures-collage">
-          <img
-            class="picture"
-            src="./images/sunset.png"
-            alt="Закат"
-          />
-          <img
-            class="picture"
-            src="./images/ice-cream.png"
-            alt="Мороженое"
-          />
-          <img
-            class="picture"
-            src="./images/tape.png"
-            alt="Кассета"
-          />
-          <img
-            class="picture"
-            src="./images/books.png"
-            alt="Книги"
-          />
-          <img
-            class="picture"
-            src="./images/street.png"
-            alt="Улица"
-          />
-        </div>
-      </section>
+      <section class="content-section section-gallery">
+        <h3 class="section__open-question title-decor">А можно в картинках?</h3>
+        <img
+          class="picture"
+          src="./images/sunset.png"
+          alt="Закат"
+          loading="lazy"
+        />
+        <img
+          class="picture"
+          src="./images/ice-cream.png"
+          alt="Мороженое"
+          loading="lazy"
+        />
+        <img
+          class="picture"
+          src="./images/tape.png"
+          alt="Кассета"
+          loading="lazy"
+        />
+        <img
+          class="picture"
+          src="./images/books.png"
+          alt="Книги"
+          loading="lazy"
+        />
+        <img
+          class="picture"
+          src="./images/street.png"
+          alt="Улица"
+          loading="lazy"
+        />
+      </section> 
     </main>
-    <footer class="footer">
-      <h2 class="footer__title">
+    <footer class="footer decorated-zone">
+      <h2 class="footer__main-title">
         focus
       </h2>
     </footer>

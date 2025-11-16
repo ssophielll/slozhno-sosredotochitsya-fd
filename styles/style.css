@@ -1,5 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+/*Стили для body*/
+
 .page {
   font-family: var(--font-fam);
   background-image: var(--bg-image);
@@ -8,34 +10,91 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding: 0 var(--padding);
+}
+
+/*Общие стили для header и footer*/
+
+.decorated-zone {
+  block-size: 100vh;
+  min-block-size: 668px;
+  inline-size: 100%;
+  padding: var(--padding) 0;
+  align-items: center;
+  position: relative;
 }
 
 .header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
-  block-size: 100vh;
-  min-block-size: 668px;
-  padding: 0;
-  align-items: center;
-  position: relative;
+}
+
+/*Декоративные элементы*/
+
+.decorated-zone::before {
+  content:'';
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  display: block;
+  background-color: transparent;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content:'';
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  display: block;
+  background-color: transparent;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
 }
 
 .rec {
+  display: flex;
   position: absolute;
+  justify-content: start;
+  align-items: center;
+  line-height: 25px;
   color: var(--accent-color);
   font-size: var(--main-text-size);
-  top: 0;
-  right: 28px;
+  font-weight: var(--font-weight-normal);
+  top: 10px;
+  right: 0px;
+  gap:10px;
+  margin-inline-end: 9px;
 }
+
+.rec::after {
+  content:'';
+  display: inline-block;
+  align-self: center;
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+/*Стили для меню с кнопками*/
 
 .header__theme-menu {
   justify-self: end;
 }
 
+/*Стили для текста в header*/
+
 .header__main-title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--main-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   justify-self: start;
@@ -53,12 +112,104 @@
   margin: 0;
 }
 
+/*Общие стили*/
+
 .title-decor {
   color: var(--title-color);
   background-color: var(--accent-color);
   font-size: var(--main-text-size);
+  font-weight: var(--font-weight-bold);
   text-align: start;
-  line-height: 23.4px;
+  line-height: var(--main-text-line-height);
   letter-spacing: 0%;
   margin: 0;
+}
+
+.content-section {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat (2, min-content);
+  gap: 20px;
+  inline-size: inherit;
+  padding: 0;
+}
+
+.section__question {
+  color: var(--accent-color);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--main-text-size);
+  line-height: var(--main-text-line-height);
+  text-align: start;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__answer-description {
+  color: var(--main-text-color);
+  font-size: var(--main-text-size);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--main-text-line-height);
+}
+
+/*Марджины между секциями"*/
+
+.section__why {
+  margin-block-start: 40px;
+}
+
+.section__what {
+  margin-block-start: 50px;
+}
+
+.section__how {
+  margin-block-start: 50px;
+}
+
+/*Оформление ссылки в тексте*/
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/*Начертание пунктов секции "Как?"*/
+.section__answer-advice {
+  font-weight: var(--font-weight-normal);
+}
+
+/*Секция галереи*/
+
+.section-gallery {
+  margin-block-start: 50px;
+  grid-template-rows: repeat(6, min-content);
+  gap: 10px;
+  inline-size: inherit;
+}
+
+.picture {
+  object-fit: contain;
+  inline-size: 100%; 
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer__main-title {
+  color: var(--main-title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--font-weight-bold);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 83%;
 }
