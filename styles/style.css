@@ -10,7 +10,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 0 var(--padding);
 }
 
 /*Общие стили для header и footer*/
@@ -19,7 +18,7 @@
   block-size: 100vh;
   min-block-size: 668px;
   inline-size: 100%;
-  padding: var(--padding) 0;
+  padding: var(--padding);
   position: relative;
 }
 
@@ -35,7 +34,7 @@
   content:'';
   position: absolute;
   top: 10px;
-  right: 0px;
+  right: 10px;
   display: block;
   background-color: transparent;
   inline-size: 25px;
@@ -48,7 +47,7 @@
   content:'';
   position: absolute;
   bottom: 10px;
-  left: 0px;
+  left: 10px;
   display: block;
   background-color: transparent;
   inline-size: 25px;
@@ -67,7 +66,7 @@
   font-size: var(--main-text-size);
   font-weight: var(--font-weight-normal);
   top: 10px;
-  right: 0px;
+  right: 19px;
   gap:10px;
   margin-inline-end: 9px;
 }
@@ -154,6 +153,10 @@
 }
 
 /*Общие стили*/
+
+.main {
+  padding: 0 var(--padding);
+}
 
 .title-decor {
   color: var(--title-color);
@@ -262,6 +265,7 @@
 /*Стили для footer*/
 
 .footer {
+  padding: 0 var(--padding);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,9 +281,6 @@
 }
 
 @media (width >= 768px) {
-  .page {
-    padding: 0 20px;
-  }
 
   .header {
     grid-template-columns: 1fr 1fr;
@@ -297,19 +298,22 @@
 
   .decorated-zone {
     min-block-size: 1024px;
-    padding: 20px 0;
+    padding: 20px;
   }
 
   .decorated-zone::before {
     top: 20px;
+    right: 20px;
   }
 
   .decorated-zone::after {
     bottom: 20px;
+    left: 20px;
   }
 
   .rec {
     top: 20px;
+    right: 20px;
   }
 
   .header__main-title {
@@ -318,8 +322,12 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   
+  .main {
+    padding: 0 20px;
+  }
+
   .content-section {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 
   .section__why {
@@ -336,12 +344,12 @@
   }
 
   .article-list {
-    grid-column: 2 / 4;
+    grid-column: 2;
   }
 
   .article-list.accent-section {
     grid-row: 2;
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   .section__how {
@@ -380,7 +388,6 @@
     grid-row: 3 / 5;
     grid-column: 1;
     object-fit: cover;
-
   }
 
   .picture.four {
@@ -394,6 +401,10 @@
     grid-column: -3 / -1;
     object-fit: contain;
   }
+
+  .footer {
+    padding: 0 20px;
+  }
 }
 
 @media (width >= 1024px) {
@@ -402,15 +413,24 @@
   }
 
   .header__theme-menu {
-  align-self: start;
-}
+    align-self: start;
+  }
 
   .header__theme-menu-list {
     flex-direction: row;
     justify-self: center;
-}
+  }
+  
+  .content-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .article-list {
+    grid-column: 2 / 4;
+  }
 
   .article-list.accent-section {
+    grid-column: span 3;
     display: grid;
     inline-size: 100%;
     grid-template-columns: 1fr 1fr 1fr;

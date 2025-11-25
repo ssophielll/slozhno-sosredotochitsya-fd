@@ -38,23 +38,24 @@
   }
 
   :root.theme-dark .rec {
-    display: flex;
-    position: absolute;
-    justify-content: start;
-    align-items: center;
-    line-height: 25px;
-    color: var(--accent-color);
-    font-size: var(--main-text-size);
-    font-weight: var(--font-weight-normal);
-    top: 10px;
-    right: 0px;
-    gap:10px;
-    margin-inline-end: 9px;
+      display: flex;
+  position: absolute;
+  justify-content: start;
+  align-items: center;
+  line-height: 25px;
+  color: var(--accent-color);
+  font-size: var(--main-text-size);
+  font-weight: var(--font-weight-normal);
+  top: 10px;
+  right: 10px;
+  gap:10px;
+  margin-inline-end: 9px;
   }
 }
 
   @media (width >= 768px) {
   :root.theme-dark .rec {
     top: 20px;
+    right: 20px;
   }
 }
