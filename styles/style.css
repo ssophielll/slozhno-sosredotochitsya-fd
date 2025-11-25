@@ -26,7 +26,7 @@
 .header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr min-content 1fr;
+  grid-template-rows: 1fr clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem) 1fr;
 }
 
 /*Декоративные элементы*/
@@ -40,8 +40,8 @@
   background-color: transparent;
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--btn_qstn_angls-color);
+  border-right: 1px solid var(--btn_qstn_angls-color);
 }
 
 .decorated-zone::after {
@@ -53,8 +53,8 @@
   background-color: transparent;
   inline-size: 25px;
   block-size: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--btn_qstn_angls-color);
+  border-left: 1px solid var(--btn_qstn_angls-color);
 }
 
 .rec {
@@ -101,7 +101,7 @@
   inline-size: min-content;
   block-size: 26px;
   padding: 1.5px 13px;
-  color: var(--btn_qstn-color);
+  color: var(--btn_qstn_angls-color);
   text-transform: lowercase;
   line-height: 18px;
   text-align: center;
@@ -109,7 +109,6 @@
   background-color: transparent;
   font-size: var(--main-text-size);
   font-weight: var(--font-weight-normal);
-  font-size: var(--main-text-size);
   cursor: pointer;
 }
 
@@ -177,7 +176,7 @@
 }
 
 .section__question {
-  color: var(--btn_qstn-color);
+  color: var(--btn_qstn_angls-color);
   font-weight: var(--font-weight-bold);
   font-size: var(--main-text-size);
   line-height: var(--main-text-line-height);
@@ -188,6 +187,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.section__answer {
+  margin-block-end: var(--padding);
+}
+
+.section__answer.advise-list {
+  margin-block-end: 0;
 }
 
 .section__answer-description {
@@ -234,6 +241,7 @@
 /*Начертание пунктов секции "Как?"*/
 .section__answer-advice {
   font-weight: var(--font-weight-normal);
+  margin-block-end: var(--padding);
 }
 
 /*Секция галереи*/
@@ -248,7 +256,7 @@
 
 .picture {
   object-fit: contain;
-  inline-size: 100%; 
+  inline-size: 100%;
 }
 
 /*Стили для footer*/
@@ -275,6 +283,7 @@
 
   .header {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) 1fr;
   }
   
   .header__theme-menu {
@@ -296,7 +305,7 @@
   }
 
   .decorated-zone::after {
-    bottom: 10px;
+    bottom: 20px;
   }
 
   .rec {
@@ -306,6 +315,7 @@
   .header__main-title {
     margin-inline-start: -20px;
     grid-column: span 2;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   
   .content-section {
@@ -347,7 +357,7 @@
   }
 
   .section__open-question {
-    grid-column: span 3; 
+    grid-column: span 3;
   }
   
   .picture.one {

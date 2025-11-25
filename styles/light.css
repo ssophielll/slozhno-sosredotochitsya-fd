@@ -28,7 +28,7 @@
     --bg-color: #FFF1F7;
     --main-title-color: #FFC2E6;
     --accent-color: #FF8DCB;
-    --btn_qstn-color:#353430;
+    --btn_qstn_angls-color:#353430;
     --title-color: #353430;
     --main-text-color: #353430;
   }
@@ -51,6 +51,7 @@
     gap:10px;
     margin-inline-end: 9px;
   }
+}
 
   @media (width >= 768px) {
   :root.theme-dark .rec {
