@@ -10,7 +10,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 /*Общие стили для header и footer*/
@@ -247,7 +247,6 @@
 /*Начертание пунктов секции "Как?"*/
 .section__answer-advice {
   font-weight: var(--font-weight-normal);
-  margin-block-end: var(--padding);
 }
 
 /*Секция галереи*/
