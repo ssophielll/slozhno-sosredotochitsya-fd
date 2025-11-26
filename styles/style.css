@@ -10,6 +10,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0 auto; 
 }
 
 /*Общие стили для header и footer*/
@@ -25,7 +26,7 @@
 .header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem) 1fr;
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 /*Декоративные элементы*/
@@ -57,7 +58,6 @@
 }
 
 .rec {
-  display: flex;
   position: absolute;
   justify-content: start;
   align-items: center;
@@ -66,7 +66,7 @@
   font-size: var(--main-text-size);
   font-weight: var(--font-weight-normal);
   top: 10px;
-  right: 19px;
+  right: 10px;
   gap:10px;
   margin-inline-end: 9px;
 }
@@ -125,7 +125,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid currentColor;
+  outline: 1px solid rgba(var(--hover-color), 0.4);
 }
 
 /*Стили для текста в header*/
@@ -145,7 +145,8 @@
   justify-self: end;
   align-self: center;
   display: block;
-  inline-size: 355px;
+  max-width: 355px;
+  width: 100%;
 }
 
 .header__title-card-span {
@@ -165,7 +166,7 @@
   font-weight: var(--font-weight-bold);
   text-align: start;
   line-height: var(--main-text-line-height);
-  letter-spacing: 0%;
+  letter-spacing: normal;
   margin: 0;
 }
 
@@ -192,8 +193,10 @@
   gap: 20px;
 }
 
-.section__answer {
-  margin-block-end: var(--padding);
+.article-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding);
 }
 
 .section__answer.advise-list {
@@ -252,7 +255,7 @@
 .section-gallery {
   margin-block-start: 50px;
   margin-block-end: 40px;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   gap: 10px;
   inline-size: inherit;
 }
@@ -284,7 +287,6 @@
 
   .header {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) 1fr;
   }
   
   .header__theme-menu {
@@ -292,6 +294,7 @@
   }
 
   .header__title-card {
+    max-width: 700px;
     grid-column: 2 / 3;
     inline-size: 100%;
   }
@@ -336,7 +339,7 @@
 
   .section__what {
     margin-block-start: 80px;
-    grid-template-rows: 2;
+    grid-template-rows: min-content min-content;
   }
  
   .section__question {
@@ -404,6 +407,10 @@
 
   .footer {
     padding: 0 20px;
+  }
+
+  .footer__main-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 

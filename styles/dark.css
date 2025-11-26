@@ -14,6 +14,24 @@
   --main-title-color: #DB00FF;
   --accent-color: #FF0070;
   --btn_qstn_angls-color:#FF0070;
+  --hover-color: 255, 0, 112;
   --title-color: #000028;
   --main-text-color: #F1B2CE;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --main-title-color: #DB00FF;
+  --accent-color: #FF0070;
+  --btn_qstn_angls-color:#FF0070;
+  --hover-color: 255, 0, 112;
+  --title-color: #000028;
+  --main-text-color: #F1B2CE;
+  }
+}
+
+:root.theme-dark .rec {
+  display: flex;
 }
